@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Bejelentkezés</title>
+    <title>Weboldal</title>
 </head>
 <body>
     <div class="container">
@@ -39,38 +39,56 @@
     </div>
 
     <div class="container2">
+
         <div class="header">
-            <h2>Kvíz</h2>
+          <h2>Kvíz</h2>
         </div>
-
-        <form id="form" class="form">
-            <div class="form-control">
-                <input type="checkbox" name="" value="1" id="">
-                <input type="checkbox" name="" value="0" id="">
-                <input type="checkbox" name="" value="0" id="">
-                <input type="checkbox" name="" value="0" id="">
+        
+        <form id="quiz-form" onsubmit="submitQuiz(event)">
+          
+            <p>1: Mit jelent a DOM?</p>
+    
+            <div class="options">
+              <input type="radio" name="q1" value="a" id="q1_1"> Document Object Model</label><br>
+              <input type="radio" name="q1" value="b" id="q1_2"> Document Orientation Model</label><br>
+              <input type="radio" name="q1" value="c" id="q1_3"> Display Output Model</label><br>
+              <input type="radio" name="q1" value="d" id="q1_4"> Document Object Model</label>
             </div>
-
-            <div class="form-control">
-                <input type="radio" name="a" id="">
-                <input type="radio" name="a" id="">
-                <input type="radio" name="a" id="">
-                <input type="radio" name="a" id="">
+          
+            <p>2: Mikkel lehet egy változót létrehozni? (Több jelölhető)</p>
+            <div class="options">
+              <input type="checkbox" name="q2" value="a" id="q2_1"> let</label>
+              <input type="checkbox" name="q2" value="b" id="q2_2"> int</label>
+              <input type="checkbox" name="q2" value="a" id="q2_3"> var</label>
+              <input type="checkbox" name="q2" value="b" id="q2_4"> variable</label>
             </div>
+          
+          <div class="question">
+            <p>3: A weboldalak szabványos jelölőnyelve:</p>
+            <input type="text" name="q3" id="q3">
+          </div>
+          
+          <div class="question">
+            <p>4: A javasriptet _____ futtatni és ________-ani. A legtöbb _______-hoz használják :</p>
+            <textarea name="q2" name="q4" id="q4"></textarea>
+          </div>
+    
+          <div class="question">
+            <p>5: Mely nyelveket nem használják weboldalak elkészítéséhez?</p>
+            <input type="text" name="q3" placeholder="html, python, c#, css" id="q5">
+          </div>
+          
+          <input type="button" id="button2" value="Ellenőriz" onclick="Quiz()">
+        </form>
+      </div>
 
-            <div class="form-control">
-                <input type="text" name="" id="">
-            </div>
+      <div class="container3">
 
-            <div class="form-control">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
-            </div>
-
-            <div class="form-control">
-                <input type="text" name="" id="">
-                <input type="text" name="" id="">
-            </div>
-    </div>
+        <div class="header">
+            <h2>Eredmény</h2>
+            <h2 id="scoreDisplay"></h2><h2>/9 pont</h2>
+          </div>
+      </div>
 
     <script src="script.js"></script>
 </body>

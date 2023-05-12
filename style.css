@@ -109,3 +109,42 @@ body {
 	max-width: 100%;
 }
 
+#button2 {
+	background: linear-gradient(120deg, #133c57, #05693f);
+	border-radius: 5px;
+	color: #fff;
+	display: block;
+	font-family: inherit;
+	font-size: 16px;
+	padding: 10px;
+	margin-top: 20px;
+	width: 100%;
+	transition: .5s;
+}
+
+#button2:hover
+{
+	background: #008075;
+}
+
+.options{
+	padding: 30px 40px;	
+}
+
+.question{
+	padding: 30px 40px;	
+}
+
+p{
+  text-align: center;
+}
+
+.container3{
+	display: none;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	width: 400px;
+	max-width: 100%;
+}
